@@ -118,8 +118,8 @@ namespace selhozWk
                     // Пример работы с параметрами
                     cmd.Parameters.AddWithValue("@User_id", zasevEdit.Text);
                     cmd.Parameters.AddWithValue("@imya", datePicker.Text);
-                    cmd.Parameters.AddWithValue("@Production_id", mainClass.id_rabochego);
-                    cmd.Parameters.AddWithValue("@prodType_id", mainClass.id_ugodiya);
+                    cmd.Parameters.AddWithValue("@Production_id", mainClass.id_ugodiya);
+                    cmd.Parameters.AddWithValue("@prodType_id", mainClass.id_rabochego);
                     cmd.Parameters.AddWithValue("@Cost", mainClass.id_rasteniye);
 
                     cmd.ExecuteNonQuery();
@@ -127,6 +127,11 @@ namespace selhozWk
                 }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
         }
     }
 }

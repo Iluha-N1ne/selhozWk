@@ -137,7 +137,7 @@
             this.Controls.Add(this.changeBtn);
             this.Controls.Add(this.searchBtn);
             this.Name = "secondPage";
-            this.Text = "secondPage";
+            this.Text = "Форма обновления";
             this.Load += new System.EventHandler(this.secondPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);

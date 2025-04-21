@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.datePicker);
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.label5);
@@ -173,9 +175,9 @@
             // addBtn
             // 
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.addBtn.Location = new System.Drawing.Point(3, 191);
+            this.addBtn.Location = new System.Drawing.Point(79, 191);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(752, 62);
+            this.addBtn.Size = new System.Drawing.Size(676, 62);
             this.addBtn.TabIndex = 10;
             this.addBtn.Text = "Внести данные";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -188,6 +190,17 @@
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(200, 34);
             this.datePicker.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(3, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 62);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "↩️";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mainPage
             // 
@@ -222,6 +235,7 @@
         private System.Windows.Forms.ComboBox ugodiyeCm;
         private System.Windows.Forms.ComboBox rasteniyeCm;
         private System.Windows.Forms.ComboBox rabochiyCm;
+        private System.Windows.Forms.Button button1;
     }
 }
 
