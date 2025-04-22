@@ -26,9 +26,13 @@ namespace selhozWk
         public class mainClass
         {
             public static string connStr = "Server = 95.183.12.18; Port = 3306; Database=selhozWk; user=selhozUser; password=123";
+            public static string familiya_rabochego;
+            public static string nazvaniye_ugodiya;
+            public static string nazvaniye_rasteniye;
+
             public static int id_rabochego;
+            public static int id_rasteniya;
             public static int id_ugodiya;
-            public static int id_rasteniye;
         }
         private void mainPage_Load(object sender, EventArgs e)
         {
@@ -55,7 +59,7 @@ namespace selhozWk
                 {
                     conn.Open();
 
-                    string posQuery = "SELECT DISTINCT id, familiya FROM rabochie;";
+                    string posQuery = "SELECT DISTINCT familiya FROM rabochie;";
                     using (MySqlCommand Command = new MySqlCommand(posQuery, conn))
                     using (MySqlDataReader Reader = Command.ExecuteReader())
                     {
@@ -63,14 +67,13 @@ namespace selhozWk
                         while (Reader.Read())
                         {
                             rabochiyCm.Items.Add(Reader["familiya"].ToString());
-                            mainClass.id_rabochego = Convert.ToInt32(Reader["id"]);
                         }
                     }
 
                     conn.Close();
                     conn.Open();
 
-                    string posiQuery = "SELECT DISTINCT id, nazvaniye FROM rasteniye;";
+                    string posiQuery = "SELECT DISTINCT nazvaniye FROM rasteniye;";
                     using (MySqlCommand driversCommand = new MySqlCommand(posiQuery, conn))
                     using (MySqlDataReader driversReader = driversCommand.ExecuteReader())
                     {
@@ -78,7 +81,6 @@ namespace selhozWk
                         while (driversReader.Read())
                         {
                             rasteniyeCm.Items.Add(driversReader["nazvaniye"].ToString());
-                            mainClass.id_rasteniye = Convert.ToInt32(driversReader["id"]);
                         }
                     }
 
@@ -86,7 +88,7 @@ namespace selhozWk
 
                     conn.Open();
 
-                    string positionQuery = "SELECT DISTINCT id, nazvaniye FROM ugodiya;";
+                    string positionQuery = "SELECT DISTINCT nazvaniye FROM ugodiya;";
                     using (MySqlCommand driversCommand = new MySqlCommand(positionQuery, conn))
                     using (MySqlDataReader driversReader = driversCommand.ExecuteReader())
                     {
@@ -94,7 +96,6 @@ namespace selhozWk
                         while (driversReader.Read())
                         {
                             ugodiyeCm.Items.Add(driversReader["nazvaniye"].ToString());
-                            mainClass.id_ugodiya = Convert.ToInt32(driversReader["id"]);
                         }
                     }
 
@@ -105,22 +106,22 @@ namespace selhozWk
                     MessageBox.Show(ex.Message, ex.HResult.ToString());
                 }
             }
-
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
-            string query = @"INSERT INTO journal (ploshadZaseva, dataPoseva, id_rabotnika, id_ugodiya, id_rasteniya) VALUES(@User_id, @imya, @prodType_id, @Production_id, @Cost)";
+
+            string query = @"INSERT INTO journal (ploshadZaseva, dataPoseva, id_rabotnika, id_ugodiya, id_rasteniya) VALUES(@ploshadZaseva, @dataPoseva, @id_rabotnika, @id_rasteniya, @id_ugodiya)";
             using (MySqlConnection conn = new MySqlConnection(mainClass.connStr))
             {
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    // Пример работы с параметрами
-                    cmd.Parameters.AddWithValue("@User_id", zasevEdit.Text);
-                    cmd.Parameters.AddWithValue("@imya", datePicker.Text);
-                    cmd.Parameters.AddWithValue("@Production_id", mainClass.id_ugodiya);
-                    cmd.Parameters.AddWithValue("@prodType_id", mainClass.id_rabochego);
-                    cmd.Parameters.AddWithValue("@Cost", mainClass.id_rasteniye);
+                    MessageBox.Show($"Рабочий {mainClass.id_rabochego}, растение {mainClass.id_rasteniya}, угодие {mainClass.id_ugodiya}");
+                    cmd.Parameters.AddWithValue("@ploshadZaseva", zasevEdit.Text);
+                    cmd.Parameters.AddWithValue("@dataPoseva", datePicker.Text);
+                    cmd.Parameters.AddWithValue("@id_rabotnika", mainClass.id_rabochego);
+                    cmd.Parameters.AddWithValue("@id_rasteniya",  mainClass.id_ugodiya);
+                    cmd.Parameters.AddWithValue("@id_ugodiya", mainClass.id_rasteniya);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Данные добавлены");
@@ -132,6 +133,60 @@ namespace selhozWk
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Hide();
+        }
+
+        private void rabochiyCm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(mainClass.connStr))
+            {
+                    conn.Open();
+
+                    string posQuery = $"SELECT DISTINCT id FROM rabochie WHERE familiya LIKE '{rabochiyCm.Text}%';";
+                    using (MySqlCommand Command = new MySqlCommand(posQuery, conn))
+                    using (MySqlDataReader Reader = Command.ExecuteReader())
+                    {
+                        while (Reader.Read())
+                        {
+                            mainClass.id_rabochego = Reader.GetInt32("id");
+                        }
+                    }
+            }
+        }
+
+        private void rasteniyeCm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(mainClass.connStr))
+            {
+                conn.Open();
+
+                string posQuery = $"SELECT DISTINCT id FROM rasteniye WHERE nazvaniye LIKE '{rasteniyeCm.Text}%';";
+                using (MySqlCommand Command = new MySqlCommand(posQuery, conn))
+                using (MySqlDataReader Reader = Command.ExecuteReader())
+                {
+                    while (Reader.Read())
+                    {
+                        mainClass.id_rasteniya = Reader.GetInt32("id");
+                    }
+                }
+            }
+        }
+
+        private void ugodiyeCm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(mainClass.connStr))
+            {
+                conn.Open();
+
+                string posQuery = $"SELECT DISTINCT id FROM ugodiya WHERE nazvaniye LIKE '{ugodiyeCm.Text}%';";
+                using (MySqlCommand Command = new MySqlCommand(posQuery, conn))
+                using (MySqlDataReader Reader = Command.ExecuteReader())
+                {
+                    while (Reader.Read())
+                    {
+                        mainClass.id_ugodiya = Reader.GetInt32("id");
+                    }
+                }
+            }
         }
     }
 }

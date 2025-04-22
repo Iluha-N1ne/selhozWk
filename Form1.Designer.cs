@@ -31,18 +31,18 @@
             this.showTable = new System.Windows.Forms.Button();
             this.createJournal = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rabochiyCm = new System.Windows.Forms.ComboBox();
-            this.rasteniyeCm = new System.Windows.Forms.ComboBox();
-            this.ugodiyeCm = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.zasevEdit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.zasevEdit = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ugodiyeCm = new System.Windows.Forms.ComboBox();
+            this.rasteniyeCm = new System.Windows.Forms.ComboBox();
+            this.rabochiyCm = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,90 +87,24 @@
             this.panel1.Size = new System.Drawing.Size(758, 256);
             this.panel1.TabIndex = 3;
             // 
-            // rabochiyCm
+            // button1
             // 
-            this.rabochiyCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.rabochiyCm.FormattingEnabled = true;
-            this.rabochiyCm.Location = new System.Drawing.Point(3, 39);
-            this.rabochiyCm.Name = "rabochiyCm";
-            this.rabochiyCm.Size = new System.Drawing.Size(209, 45);
-            this.rabochiyCm.TabIndex = 0;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(3, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 62);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "↩️";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // rasteniyeCm
+            // datePicker
             // 
-            this.rasteniyeCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.rasteniyeCm.FormattingEnabled = true;
-            this.rasteniyeCm.Location = new System.Drawing.Point(280, 39);
-            this.rasteniyeCm.Name = "rasteniyeCm";
-            this.rasteniyeCm.Size = new System.Drawing.Size(209, 45);
-            this.rasteniyeCm.TabIndex = 1;
-            // 
-            // ugodiyeCm
-            // 
-            this.ugodiyeCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.ugodiyeCm.FormattingEnabled = true;
-            this.ugodiyeCm.Location = new System.Drawing.Point(549, 39);
-            this.ugodiyeCm.Name = "ugodiyeCm";
-            this.ugodiyeCm.Size = new System.Drawing.Size(209, 45);
-            this.ugodiyeCm.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(24, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Ответственный";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(335, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Растение";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(600, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 28);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Угодие";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(215, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 28);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Дата";
-            // 
-            // zasevEdit
-            // 
-            this.zasevEdit.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.zasevEdit.Location = new System.Drawing.Point(417, 142);
-            this.zasevEdit.Name = "zasevEdit";
-            this.zasevEdit.Size = new System.Drawing.Size(209, 43);
-            this.zasevEdit.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(435, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 28);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Площадь засева";
+            this.datePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.datePicker.Location = new System.Drawing.Point(145, 151);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(200, 34);
+            this.datePicker.TabIndex = 11;
             // 
             // addBtn
             // 
@@ -183,24 +117,93 @@
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // datePicker
+            // label5
             // 
-            this.datePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.datePicker.Location = new System.Drawing.Point(145, 151);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(200, 34);
-            this.datePicker.TabIndex = 11;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(435, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 28);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Площадь засева";
             // 
-            // button1
+            // zasevEdit
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(3, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 62);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "↩️";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.zasevEdit.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.zasevEdit.Location = new System.Drawing.Point(417, 142);
+            this.zasevEdit.Name = "zasevEdit";
+            this.zasevEdit.Size = new System.Drawing.Size(209, 43);
+            this.zasevEdit.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(215, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 28);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Дата";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(600, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 28);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Угодие";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(335, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Растение";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(24, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Ответственный";
+            // 
+            // ugodiyeCm
+            // 
+            this.ugodiyeCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.ugodiyeCm.FormattingEnabled = true;
+            this.ugodiyeCm.Location = new System.Drawing.Point(549, 39);
+            this.ugodiyeCm.Name = "ugodiyeCm";
+            this.ugodiyeCm.Size = new System.Drawing.Size(209, 45);
+            this.ugodiyeCm.TabIndex = 2;
+            this.ugodiyeCm.SelectedIndexChanged += new System.EventHandler(this.ugodiyeCm_SelectedIndexChanged);
+            // 
+            // rasteniyeCm
+            // 
+            this.rasteniyeCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.rasteniyeCm.FormattingEnabled = true;
+            this.rasteniyeCm.Location = new System.Drawing.Point(280, 39);
+            this.rasteniyeCm.Name = "rasteniyeCm";
+            this.rasteniyeCm.Size = new System.Drawing.Size(209, 45);
+            this.rasteniyeCm.TabIndex = 1;
+            this.rasteniyeCm.SelectedIndexChanged += new System.EventHandler(this.rasteniyeCm_SelectedIndexChanged);
+            // 
+            // rabochiyCm
+            // 
+            this.rabochiyCm.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
+            this.rabochiyCm.FormattingEnabled = true;
+            this.rabochiyCm.Location = new System.Drawing.Point(3, 39);
+            this.rabochiyCm.Name = "rabochiyCm";
+            this.rabochiyCm.Size = new System.Drawing.Size(209, 45);
+            this.rabochiyCm.TabIndex = 13;
+            this.rabochiyCm.SelectedIndexChanged += new System.EventHandler(this.rabochiyCm_SelectedIndexChanged);
             // 
             // mainPage
             // 
