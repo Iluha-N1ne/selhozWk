@@ -42,7 +42,7 @@
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(12, 58);
+            this.dataGrid.Location = new System.Drawing.Point(15, 86);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
@@ -52,7 +52,7 @@
             // changeBtn
             // 
             this.changeBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changeBtn.Location = new System.Drawing.Point(794, 258);
+            this.changeBtn.Location = new System.Drawing.Point(796, 286);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(172, 87);
             this.changeBtn.TabIndex = 3;
@@ -63,7 +63,7 @@
             // dltBtn
             // 
             this.dltBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dltBtn.Location = new System.Drawing.Point(794, 351);
+            this.dltBtn.Location = new System.Drawing.Point(796, 379);
             this.dltBtn.Name = "dltBtn";
             this.dltBtn.Size = new System.Drawing.Size(172, 87);
             this.dltBtn.TabIndex = 4;
@@ -76,48 +76,50 @@
             this.tableSlct.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
             this.tableSlct.FormattingEnabled = true;
             this.tableSlct.Items.AddRange(new object[] {
-            "Растения",
-            "Рабочие",
-            "Угодия",
-            "Журнал"});
-            this.tableSlct.Location = new System.Drawing.Point(786, 66);
+            "журналПродаж",
+            "Поставщики",
+            "Тип",
+            "Товары"});
+            this.tableSlct.Location = new System.Drawing.Point(796, 235);
             this.tableSlct.Name = "tableSlct";
-            this.tableSlct.Size = new System.Drawing.Size(180, 45);
+            this.tableSlct.Size = new System.Drawing.Size(172, 45);
             this.tableSlct.TabIndex = 5;
             this.tableSlct.SelectedIndexChanged += new System.EventHandler(this.tableSlct_SelectedIndexChanged);
             // 
             // srcEdit
             // 
             this.srcEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.srcEdit.Location = new System.Drawing.Point(11, 21);
+            this.srcEdit.Location = new System.Drawing.Point(15, 41);
             this.srcEdit.Name = "srcEdit";
-            this.srcEdit.Size = new System.Drawing.Size(604, 39);
+            this.srcEdit.Size = new System.Drawing.Size(774, 39);
             this.srcEdit.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(808, 47);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(799, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 16);
+            this.label1.Size = new System.Drawing.Size(169, 28);
             this.label1.TabIndex = 7;
             this.label1.Text = "Выбрать таблицу";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 4);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(11, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 16);
+            this.label2.Size = new System.Drawing.Size(204, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Совершить поиск по";
             // 
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.searchBtn.Location = new System.Drawing.Point(613, 20);
+            this.searchBtn.Location = new System.Drawing.Point(796, 31);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(175, 42);
+            this.searchBtn.Size = new System.Drawing.Size(175, 53);
             this.searchBtn.TabIndex = 9;
             this.searchBtn.Text = "Поиск";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -127,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 450);
+            this.ClientSize = new System.Drawing.Size(979, 476);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGrid);
