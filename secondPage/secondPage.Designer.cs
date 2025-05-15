@@ -34,7 +34,7 @@
             this.tableSlct = new System.Windows.Forms.ComboBox();
             this.srcEdit = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.srcLbl = new System.Windows.Forms.Label();
             this.searchBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
@@ -104,15 +104,15 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Выбрать таблицу";
             // 
-            // label2
+            // srcLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(11, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 28);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Совершить поиск по";
+            this.srcLbl.AutoSize = true;
+            this.srcLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.srcLbl.Location = new System.Drawing.Point(11, 10);
+            this.srcLbl.Name = "srcLbl";
+            this.srcLbl.Size = new System.Drawing.Size(204, 28);
+            this.srcLbl.TabIndex = 8;
+            this.srcLbl.Text = "Совершить поиск по";
             // 
             // searchBtn
             // 
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 476);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.srcLbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.srcEdit);
@@ -155,7 +155,7 @@
         private System.Windows.Forms.ComboBox tableSlct;
         private System.Windows.Forms.TextBox srcEdit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label srcLbl;
         private System.Windows.Forms.Button searchBtn;
     }
 }

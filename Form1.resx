@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="menuStrip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>289, 17</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Вас приветствует справка данного приложения!
+Это приложение вкулючает в себя возможность добавлять, удалять, обновлять информацию о продажах и поставщиках, а так же просматривать статистику по продажам.
+Разбор функций приложения.
+Для добавления, удаления и обновления данных нужно перейти по первой доступной кнопке в меню;
+Выбрать в списке слева таблицу, внести или удалить данные, при необходимости совершить поиск.
+Для просмотра статистики нужно нажать на вторую кнопку в меню и просмотреть содержимое. При необходимости можно изменить диапозон дат для отображения данных в таблице.</value>
+  </data>
 </root>

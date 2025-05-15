@@ -35,6 +35,29 @@ namespace selhozWk.secondPage
         private void tableSlct_SelectedIndexChanged(object sender, EventArgs e)
         {
             sqlTables.tableName = tableSlct.Text;
+            switch (sqlTables.tableName)
+            {
+                case "Товары":
+                    {
+                        srcLbl.Text = "Совершить поиск по названию";
+                        break;
+                    }
+                case "Тип":
+                    {
+                        srcLbl.Text = "Совершить поиск по id";
+                        break;
+                    }
+                case "Поставщики":
+                    {
+                        srcLbl.Text = "Совершить поиск по id";
+                        break;
+                    }
+                case "журналПродаж":
+                    {
+                        srcLbl.Text = "Совершить поиск по id Поставщика";
+                        break;
+                    }
+            }
             sqlTables.query = $"SELECT * FROM {sqlTables.tableName}";
             dataLoad(sqlTables.query);
         }
@@ -128,7 +151,7 @@ namespace selhozWk.secondPage
         {
             Dictionary<string, string> tablesSearch = new Dictionary<string, string>
         {
-                {"Товары",$@"{sqlTables.query} WHERE LIKE Назввание'{srcEdit.Text}%'"},
+                {"Товары",$@"{sqlTables.query} WHERE Назввание LIKE '%{srcEdit.Text}%'"},
                 {"Тип",$@"{sqlTables.query} WHERE id LIKE {srcEdit.Text}"},
                 {"Поставщики",$@"{sqlTables.query} WHERE id LIKE {srcEdit.Text}"},
                 {"журналПродаж",$@"{sqlTables.query} WHERE id_Поставщика LIKE '{srcEdit.Text}'"}

@@ -48,5 +48,15 @@ namespace selhozWk
             staticPage.statisticPage transfer = new staticPage.statisticPage();
             transfer.Show();
         }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
     }
 }
